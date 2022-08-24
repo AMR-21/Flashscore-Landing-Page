@@ -10,10 +10,13 @@ const topBtn = document.querySelector(".btn-top");
 const logo = document.querySelector(".main-logo");
 
 // Setting main logo
-window.addEventListener("resize", function () {
+function setLogo() {
   if (window.innerWidth <= 704) logo.src = "imgs/main-2.webp";
   else logo.src = "imgs/main-1.webp";
-});
+}
+
+setLogo();
+window.addEventListener("resize", setLogo);
 
 // Building navigation
 // Function to append list item to the navigation
