@@ -50,6 +50,7 @@ window.addEventListener("scroll", (e) => {
     ) {
       // Setting the active section in nav and mobile nav
       link && link.classList.add("active");
+      current.href = `#section-${section.getAttribute("name")}`;
       current.textContent = section.getAttribute("data");
     } else {
       link && link.classList.remove("active");
