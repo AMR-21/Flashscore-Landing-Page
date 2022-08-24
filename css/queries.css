@@ -274,7 +274,8 @@
   }
 
   .steps::before {
-    top: 6.5%;
+    height: 80%;
+    top: 8%;
   }
 
   .cta-btn:link,
