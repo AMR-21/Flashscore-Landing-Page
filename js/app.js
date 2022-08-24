@@ -7,9 +7,15 @@ const sections = document.querySelectorAll("section");
 const current = document.querySelector(".current-section");
 const heroSection = document.querySelector("#section-hero");
 const topBtn = document.querySelector(".btn-top");
+const logo = document.querySelector(".main-logo");
+
+// Setting main logo
+window.addEventListener("resize", function () {
+  if (window.innerWidth <= 704) logo.src = "imgs/main-2.webp";
+  else logo.src = "imgs/main-1.webp";
+});
 
 // Building navigation
-
 // Function to append list item to the navigation
 function createNavItem(text, href = "#", id, className) {
   const listEl = document.createElement("li");
