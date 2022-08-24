@@ -69,6 +69,10 @@
   border-bottom: 2px solid #e6e9ea;
 }
 
+.nav-link.active:hover {
+  color: #f31148;
+  border-bottom: 2px solid #f31148;
+}
 .btn-nav {
   justify-self: flex-end;
   width: 19rem;
