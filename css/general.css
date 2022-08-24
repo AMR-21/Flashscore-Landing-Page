@@ -110,9 +110,9 @@ body {
 
 .subheading {
   font-size: 1.6rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.6rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.75px;
   font-weight: 600;
   color: #f31148;
 }
