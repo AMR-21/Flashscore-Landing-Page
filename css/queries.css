@@ -37,6 +37,11 @@
   .grid {
     gap: 8rem;
   }
+
+  .steps::before {
+    height: 97%;
+    top: 1.5%;
+  }
 }
 
 /**************************/
@@ -142,13 +147,13 @@
   }
   .cta-btn:link,
   .cta-btn:visited {
-    width: 25%;
+    width: 27%;
   }
 
-  .steps::before {
+  /* .steps::before {
     top: 39rem;
     height: 47%;
-  }
+  } */
 }
 
 /**************************/
@@ -170,13 +175,13 @@
   }
 
   .hero-img {
-    width: 60%;
+    width: 75%;
     z-index: 10;
   }
 
   .hero-img-box::after {
-    width: 60%;
-    padding-bottom: 60%;
+    width: 75%;
+    padding-bottom: 75%;
   }
 
   .cta-btn:link,
@@ -185,13 +190,27 @@
   }
 
   .steps::before {
-    top: 40rem;
-    height: 49%;
+    top: 6%;
+    height: 86%;
+  }
+
+  .step-number {
+    font-size: 2rem;
+  }
+
+  .num-box::after {
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+
+  .num-box::before {
+    width: 5.2rem;
+    height: 5.2rem;
   }
 
   .cta-btn:link,
   .cta-btn:visited {
-    width: 30%;
+    width: 35%;
   }
 
   .main-logo {
@@ -212,13 +231,9 @@
   .cta-btn:visited {
     width: 47%;
   }
-  .steps::before {
-    top: 47rem;
-    height: 48%;
-  }
 
   .step-description {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   .grid {
@@ -239,6 +254,10 @@
   .btn.btn-primary.cta-btn:link {
     padding: 0.8rem 2.4rem;
   }
+
+  .steps::before {
+    top: 7%;
+  }
 }
 
 /**************************/
@@ -255,8 +274,7 @@
   }
 
   .steps::before {
-    top: 52rem;
-    height: 51%;
+    top: 6.5%;
   }
 
   .cta-btn:link,

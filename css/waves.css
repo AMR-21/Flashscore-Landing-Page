@@ -17,8 +17,8 @@
 .wave-hero svg {
   position: relative;
   display: block;
-  width: calc(127% + 1.3px);
-  height: 76px;
+  width: calc(132% + 1.3px);
+  height: 73px;
 }
 
 .wave-hero .shape-fill {
