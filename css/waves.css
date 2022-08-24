@@ -1,0 +1,100 @@
+/* Styles to implement waves */
+
+/********************/
+/* Hero */
+/********************/
+
+.wave-hero {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.wave-hero svg {
+  position: relative;
+  display: block;
+  width: calc(146% + 1.3px);
+  height: 150px;
+}
+
+.wave-hero .shape-fill {
+  fill: #e6e9ea;
+}
+
+/********************/
+/* Features */
+/********************/
+
+.wave-features {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.wave-features svg {
+  position: relative;
+  display: block;
+  width: calc(120% + 1.3px);
+  height: 75px;
+}
+
+.wave-features .shape-fill {
+  fill: #e6e9ea;
+}
+
+/********************/
+/* Testimonials */
+/********************/
+
+.wave-testimonials {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.wave-testimonials svg {
+  position: relative;
+  display: block;
+  width: calc(164% + 1.3px);
+  height: 75px;
+}
+
+.wave-testimonials .shape-fill {
+  fill: #051e28;
+}
+
+/********************/
+/* Get in touch */
+/********************/
+.wave-get {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.wave-get svg {
+  position: relative;
+  display: block;
+  width: calc(137% + 1.3px);
+  height: 75px;
+}
+
+.wave-get .shape-fill {
+  fill: #e6e9ea;
+}

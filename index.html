@@ -4,7 +4,382 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Flashscore &mdash; Live Scores</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/waves.css" />
+    <link rel="stylesheet" href="css/general.css" />
+
+    <!-- Script for adding the icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </head>
-  <body></body>
+
+  <body>
+    <header id="header">
+      <a href="#">
+        <img class="main-logo" src="imgs/main-1.webp" alt="flashscore logo" />
+      </a>
+
+      <nav>
+        <ul class="main-nav"></ul>
+      </nav>
+
+      <a href="#section-get" class="btn btn-primary btn-nav">Get The App</a>
+    </header>
+
+    <section id="section-hero" name="hero">
+      <div class="hero grid grid-2-cols">
+        <div class="hero-text-box">
+          <h1 class="primary-heading">All the scores, in your hands</h1>
+          <p class="hero-description margin-btm-md">
+            The most up-to-date live scores, results, stats and other info from
+            football, tennis, basketball and 30+ sports and more than 6000
+            competitions from all around the world.
+          </p>
+          <a href="#get-app" class="btn btn-primary margin-ryt-md"
+            >Get The App
+          </a>
+          <a
+            href="https://www.flashscore.com/"
+            target="_blank"
+            class="btn btn-secondary"
+          >
+            Visit Web App &rarr;
+          </a>
+        </div>
+        <div class="hero-img-box">
+          <img
+            class="hero-img"
+            src="imgs/hero.webp"
+            alt="Iphones with snaps from the flashscore app"
+          />
+        </div>
+      </div>
+      <!-- Implementation of wave -->
+      <div class="wave-hero">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
+    </section>
+
+    <section id="section-how" name="how">
+      <div class="container">
+        <div class="heading">
+          <span class="subheading">How to get started</span>
+          <h2 class="secondary-heading">Get in touch in 3 simple steps</h2>
+        </div>
+
+        <div class="steps">
+          <div class="step grid grid-3-cols">
+            <div></div>
+            <div class="num-box">
+              <p class="step-number">1</p>
+            </div>
+            <p class="step-description">
+              Open the app store on your mobile and
+              <strong>download the application</strong>.
+            </p>
+          </div>
+
+          <div class="step grid grid-3-cols">
+            <p class="step-description align-right">
+              Sign in and select
+              <strong>your favourite teams and competitions</strong>.
+            </p>
+            <div class="num-box">
+              <p class="step-number">2</p>
+            </div>
+            <div></div>
+          </div>
+          <div class="step grid grid-3-cols">
+            <div></div>
+            <div class="num-box">
+              <p class="step-number">3</p>
+            </div>
+            <p class="step-description">
+              <strong>Adjust the notifications </strong> and enjoy our app!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-features" name="features">
+      <!-- Wave -->
+      <div class="wave-features">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
+
+      <div class="heading">
+        <span class="subheading">Features</span>
+        <h2 class="secondary-heading">What makes us different</h2>
+      </div>
+      <div class="container grid grid-4-cols">
+        <div class="feature">
+          <ion-icon class="feature-icon" name="earth-outline"></ion-icon>
+          <p class="feature-title">Great Coverage</p>
+          <p class="feature-description">
+            You can find football live scores and more than 30 other sports and
+            6000+ competitions in our app.
+          </p>
+        </div>
+
+        <div class="feature">
+          <ion-icon class="feature-icon" name="flash-outline"></ion-icon>
+          <p class="feature-title">Speed</p>
+          <p class="feature-description">
+            Whether a goal is scored, red card issued, set or period is over,
+            you will know immediately.
+          </p>
+        </div>
+
+        <div class="feature">
+          <ion-icon class="feature-icon" name="star-outline"></ion-icon>
+          <p class="feature-title">Favourites</p>
+          <p class="feature-description">
+            Don’t waste your time, and follow only your favourite matches, teams
+            and competitions.
+          </p>
+        </div>
+
+        <div class="feature">
+          <ion-icon class="feature-icon" name="clipboard-outline"></ion-icon>
+          <p class="feature-title">Line-Ups & H2H</p>
+          <p class="feature-description">
+            We have the line-ups in advance. And also the H2H history so you can
+            check previous meetings.
+          </p>
+        </div>
+
+        <div class="feature">
+          <ion-icon class="feature-icon" name="stats-chart-outline"></ion-icon>
+          <p class="feature-title">Live Tables</p>
+          <p class="feature-description">
+            Our live tables will show you if a scored goal has changed the
+            league ranking.
+          </p>
+        </div>
+
+        <div class="feature">
+          <ion-icon class="feature-icon" name="mic-outline"></ion-icon>
+          <p class="feature-title">Live Commentary</p>
+          <p class="feature-description">
+            Unable to watch the match on TV? Stay up-to-date with our detailed
+            live text commentary.
+          </p>
+        </div>
+
+        <div class="feature">
+          <ion-icon
+            class="feature-icon"
+            name="notifications-outline"
+          ></ion-icon>
+          <p class="feature-title">Notifications</p>
+          <p class="feature-description">
+            You will not miss any of the match notifications. Select your
+            favourite matches and wait for our notifications.
+          </p>
+        </div>
+
+        <div class="feature">
+          <ion-icon class="feature-icon" name="videocam-outline"></ion-icon>
+          <p class="feature-title">Previews</p>
+          <p class="feature-description">
+            Scores and numbers don't tell everything. This is why you can find a
+            detailed preview for every match.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-testimonials" name="testimonials">
+      <!-- Wave -->
+      <div class="wave-testimonials">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
+      <div class="container">
+        <span class="subheading">Testimonials</span>
+        <h2 class="secondary-heading">Once you use it, you love it</h2>
+        <div class="testimonial margin-btm-md">
+          <div class="author-heading">
+            <div class="testimonial-img-box">
+              <img
+                src="imgs/lee-jones.webp"
+                alt="photo of man with a dog"
+                class="author-icon"
+              />
+              <div class="quotes">
+                <p>❛❛</p>
+              </div>
+            </div>
+            <div>
+              <p class="author">Lee Jones</p>
+              <div class="rating">
+                <ion-icon class="rate-icon" name="star"></ion-icon>
+                <ion-icon class="rate-icon" name="star"></ion-icon>
+                <ion-icon class="rate-icon" name="star"></ion-icon>
+                <ion-icon class="rate-icon" name="star"></ion-icon>
+                <ion-icon class="rate-icon" name="star"></ion-icon>
+              </div>
+            </div>
+          </div>
+          <blockquote class="testimonial-description">
+            "I've been using FlashScores for about 7 years now, it is a
+            brilliant app with loads of useful settings that ensures it can
+            deliver exactly what you need and it's constantly being improved
+            upon. Also, many of the suggestions I've made over the years have
+            been subsequently implemented so the developers really listen. I
+            can't recommend this highly enough."
+          </blockquote>
+          <a
+            href="https://play.google.com/store/apps/details?id=eu.livesport.FlashScore_com&hl=en&gl=AL"
+            class="btn-more"
+            target="_blank"
+            >Read more customer reviews &rarr;</a
+          >
+        </div>
+
+        <div class="testimonial">
+          <div class="author-heading">
+            <div class="testimonial-img-box">
+              <img
+                src="imgs/pzmaz.webp"
+                alt="photo of man with a dog"
+                class="author-icon"
+              />
+              <div class="quotes">
+                <p>❛❛</p>
+              </div>
+            </div>
+            <div>
+              <p class="author">Pzmaz</p>
+              <div class="rating">
+                <ion-icon class="rate-icon" name="star"></ion-icon>
+                <ion-icon class="rate-icon" name="star"></ion-icon>
+                <ion-icon class="rate-icon" name="star"></ion-icon>
+                <ion-icon class="rate-icon" name="star"></ion-icon>
+                <ion-icon class="rate-icon" name="star"></ion-icon>
+              </div>
+            </div>
+          </div>
+          <blockquote class="testimonial-description">
+            "If they just left the app the way it is I’d be happy. Any sport you
+            want but I mainly use it for soccer. Never saw an app so straight
+            forward, fast and easy to use, quick to get the info you want with
+            no annoying ads slowing it down or getting in the way. Why can’t
+            other apps do ads like they do? Greed, they don’t care about the
+            user, while this one does."
+          </blockquote>
+          <a
+            href="https://apps.apple.com/us/app/flashscore-live-scores/id766443283?see-all=reviews"
+            class="btn-more"
+            target="_blank"
+            >Read more customer reviews &rarr;</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section id="section-get" name="get">
+      <!-- Wave -->
+      <div class="wave-get">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
+
+      <div class="container">
+        <div class="heading">
+          <span class="subheading">Get the app</span>
+          <h2 class="secondary-heading">
+            Already loving it? Get in touch now !
+          </h2>
+        </div>
+        <p class="get-text">
+          Start your journey today by the downloading the app
+        </p>
+        <div class="cta-links">
+          <a
+            href="https://apps.apple.com/us/app/flashscore-live-scores/id766443283"
+            class="btn btn-primary cta-btn"
+            target="_blank"
+          >
+            <ion-icon class="store-logo" name="logo-apple"></ion-icon>
+            <div class="cta-text-box">
+              <p class="cta-subheading">Download on the</p>
+              <p class="cta-store">App Store</p>
+            </div>
+          </a>
+          <a
+            href="https://play.google.com/store/apps/details?id=eu.livesport.FlashScore_com&hl=en&gl=AL"
+            class="btn btn-primary cta-btn"
+            target="_blank"
+          >
+            <ion-icon
+              class="store-logo"
+              name="logo-google-playstore"
+            ></ion-icon>
+            <div class="cta-text-box">
+              <p class="cta-subheading">GET IT ON</p>
+              <p class="cta-store">Google Play</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="js/app.js"></script>
 </html>
