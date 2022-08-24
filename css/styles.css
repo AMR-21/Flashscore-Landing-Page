@@ -26,8 +26,10 @@
   /* To make it sticky */
   height: 8rem;
   width: 100%;
-  position: -webkit-sticky;
-  position: sticky;
+  /* position: -webkit-sticky;
+  position-
+  position: sticky; */
+  position: fixed;
   top: 0px;
   z-index: 999;
 }
@@ -147,7 +149,7 @@
 /********************/
 
 #section-hero {
-  padding: 9.6rem 0 12.8rem 0;
+  padding: 16rem 0;
   margin-top: -8rem;
   background: linear-gradient(to top right, #051e28, #042431);
   position: relative;
@@ -524,7 +526,7 @@ footer {
   border-radius: 9px;
   cursor: pointer;
   position: fixed;
-  right: 1.6rem;
+  right: 2%;
   bottom: 2%;
   transition: all 0.3s;
 }

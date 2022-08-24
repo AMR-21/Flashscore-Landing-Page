@@ -73,9 +73,7 @@ topBtn.addEventListener("click", function () {
 
 const obs = new IntersectionObserver(
   function (entries) {
-    console.log(entries);
     const ent = entries[0];
-    console.log(ent.isIntersecting);
     if (!ent.isIntersecting) {
       topBtn.classList.remove("hidden");
     } else {
