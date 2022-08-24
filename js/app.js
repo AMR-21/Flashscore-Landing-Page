@@ -59,9 +59,25 @@ window.addEventListener("scroll", (e) => {
 });
 
 // Mobile nav
+// Function to disable scroll when nav is open
+function disableScroll() {
+  // Get the current page scroll position
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+  // if any scroll is attempted, set this to the previous value
+  window.onscroll = function () {
+    window.scrollTo(scrollLeft, scrollTop);
+  };
+}
+
+function enableScroll() {
+  window.onscroll = function () {};
+}
+
 // Button handler
 navBtn.addEventListener("click", function () {
   headerEl.classList.toggle("nav-open");
+  headerEl.classList.contains("nav-open") ? disableScroll() : enableScroll();
 });
 
 // Mobile nav links handler
@@ -72,6 +88,7 @@ headerEl.addEventListener("click", function (e) {
       e.target.getAttribute("name") === "arrow-down-outline")
   ) {
     headerEl.classList.remove("nav-open");
+    enableScroll();
   }
 });
 
