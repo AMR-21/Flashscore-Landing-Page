@@ -62,7 +62,7 @@ body {
   color: #333;
   line-height: 1;
   font-weight: 500;
-  /* overflow-x: hidden; */
+  position: relative;
 }
 
 /** General and reusable components */
@@ -172,4 +172,9 @@ body {
 .btn-secondary:active {
   border-bottom: 1px solid transparent;
   color: #f31148;
+}
+
+.hidden {
+  display: none;
+  transition: all 0.3s;
 }

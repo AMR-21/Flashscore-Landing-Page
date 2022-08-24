@@ -5,6 +5,8 @@ const navBtn = document.querySelector(".btn-mobile-nav");
 const headerEl = document.querySelector("#header");
 const sections = document.querySelectorAll("section");
 const current = document.querySelector(".current-section");
+const heroSection = document.querySelector("#section-hero");
+const topBtn = document.querySelector(".btn-top");
 
 // Building navigation
 
@@ -34,8 +36,8 @@ window.addEventListener("scroll", (e) => {
     const link = document.querySelector(`#${section.getAttribute("name")}`);
     if (
       // checking if the section is in the viewport with extra 80 pixels
-      scrollPos + 80 > section.offsetTop &&
-      scrollPos + 80 < section.offsetTop + section.offsetHeight
+      scrollPos + 100 > section.offsetTop &&
+      scrollPos + 100 < section.offsetTop + section.offsetHeight
     ) {
       // Setting the active section in nav and mobile nav
       link && link.classList.add("active");
@@ -47,7 +49,6 @@ window.addEventListener("scroll", (e) => {
 });
 
 // Mobile nav
-
 // Button handler
 navBtn.addEventListener("click", function () {
   headerEl.classList.toggle("nav-open");
@@ -63,3 +64,30 @@ headerEl.addEventListener("click", function (e) {
     headerEl.classList.remove("nav-open");
   }
 });
+
+// Scroll to top button
+
+topBtn.addEventListener("click", function () {
+  heroSection.scrollIntoView();
+});
+
+const obs = new IntersectionObserver(
+  function (entries) {
+    console.log(entries);
+    const ent = entries[0];
+    console.log(ent.isIntersecting);
+    if (!ent.isIntersecting) {
+      topBtn.classList.remove("hidden");
+    } else {
+      topBtn.classList.add("hidden");
+    }
+  },
+  {
+    // In the viewport
+    root: null,
+    threshold: 0,
+    rootMargin: "-150px",
+  }
+);
+
+obs.observe(heroSection);
