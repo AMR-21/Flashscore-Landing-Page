@@ -163,6 +163,7 @@
   #section-hero {
     padding: 18rem 3.2rem;
     text-align: center;
+    height: 100vh;
   }
 
   .hero.grid.grid-2-cols {
@@ -196,27 +197,6 @@
 
   .main-logo {
     height: 4rem;
-  }
-
-  .wave-hero {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-  }
-
-  .wave-hero svg {
-    position: relative;
-    display: block;
-    width: calc(146% + 1.3px);
-    height: 109px;
-  }
-
-  .wave-hero .shape-fill {
-    fill: #e6e9ea;
   }
 }
 
