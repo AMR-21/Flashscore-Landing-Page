@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/waves.css" />
     <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/queries.css" />
 
     <!-- Script for adding the icons -->
     <script
@@ -31,19 +32,30 @@
   </head>
 
   <body>
-    <header id="header">
+    <header id="header" class="">
       <a href="#">
         <img class="main-logo" src="imgs/main-1.webp" alt="flashscore logo" />
       </a>
+
+      <a href="#" class="current-section">Home</a>
 
       <nav>
         <ul class="main-nav"></ul>
       </nav>
 
       <a href="#section-get" class="btn btn-primary btn-nav">Get The App</a>
+      <div class="mob-nav-btns">
+        <a href="#section-get" class="btn-download">
+          <ion-icon class="download-icon" name="arrow-down-outline"></ion-icon>
+        </a>
+        <button title="title" type="button" class="btn-mobile-nav">
+          <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+          <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+        </button>
+      </div>
     </header>
 
-    <section id="section-hero" name="hero">
+    <section id="section-hero" data="Home" name="hero">
       <div class="hero grid grid-2-cols">
         <div class="hero-text-box">
           <h1 class="primary-heading">All the scores, in your hands</h1>
@@ -87,7 +99,7 @@
       </div>
     </section>
 
-    <section id="section-how" name="how">
+    <section id="section-how" data="Help" name="how">
       <div class="container">
         <div class="heading">
           <span class="subheading">How to get started</span>
@@ -95,7 +107,7 @@
         </div>
 
         <div class="steps">
-          <div class="step grid grid-3-cols">
+          <div class="step">
             <div></div>
             <div class="num-box">
               <p class="step-number">1</p>
@@ -106,7 +118,7 @@
             </p>
           </div>
 
-          <div class="step grid grid-3-cols">
+          <div class="step">
             <p class="step-description align-right">
               Sign in and select
               <strong>your favourite teams and competitions</strong>.
@@ -116,7 +128,7 @@
             </div>
             <div></div>
           </div>
-          <div class="step grid grid-3-cols">
+          <div class="step">
             <div></div>
             <div class="num-box">
               <p class="step-number">3</p>
@@ -129,7 +141,7 @@
       </div>
     </section>
 
-    <section id="section-features" name="features">
+    <section id="section-features" data="Features" name="features">
       <!-- Wave -->
       <div class="wave-features">
         <svg
@@ -227,7 +239,7 @@
       </div>
     </section>
 
-    <section id="section-testimonials" name="testimonials">
+    <section id="section-testimonials" data="Testimonials" name="testimonials">
       <!-- Wave -->
       <div class="wave-testimonials">
         <svg
@@ -349,7 +361,7 @@
           </h2>
         </div>
         <p class="get-text">
-          Start your journey today by the downloading the app
+          Our mobile app is optimized for your phone. Download it for free!
         </p>
         <div class="cta-links">
           <a
@@ -380,6 +392,85 @@
         </div>
       </div>
     </section>
+
+    <footer>
+      <div class="container grid grid-3-cols">
+        <div class="col">
+          <p class="col-head">Flashscore.com</p>
+          <a
+            class="footer-link"
+            target="_blank"
+            href="https://www.flashscore.com/terms/"
+          >
+            Terms of use
+          </a>
+          <a
+            class="footer-link"
+            target="_blank"
+            href="https://www.flashscore.com/advertise/"
+          >
+            Advertise
+          </a>
+          <a
+            class="footer-link"
+            target="_blank"
+            href="https://www.flashscore.com/contact/"
+          >
+            Contact
+          </a>
+          <a
+            class="footer-link"
+            target="_blank"
+            href="https://www.flashscore.com/mobile/"
+          >
+            Mobile
+          </a>
+        </div>
+        <div class="col">
+          <p class="col-head">&nbsp;</p>
+          <a
+            class="footer-link"
+            target="_blank"
+            href="https://www.flashscore.com/live-scores/"
+          >
+            Live Scores
+          </a>
+          <a
+            class="footer-link"
+            target="_blank"
+            href="https://www.flashscore.com/recommended/"
+          >
+            Recommended Sites
+          </a>
+          <a
+            class="footer-link"
+            target="_blank"
+            href="https://www.flashscore.com/faq/"
+          >
+            FAQ
+          </a>
+        </div>
+        <div class="col">
+          <p class="col-head">Follow us</p>
+          <a
+            class="footer-link"
+            target="_blank"
+            href="https://twitter.com/flashscorecom"
+          >
+            <ion-icon name="logo-twitter"></ion-icon>
+            Twitter
+          </a>
+          <a
+            class="footer-link"
+            target="_blank"
+            href="https://instagram.com/flashscoreofficial"
+          >
+            <ion-icon name="logo-instagram"></ion-icon>
+            Instagram
+          </a>
+        </div>
+      </div>
+    </footer>
   </body>
   <script src="js/app.js"></script>
 </html>

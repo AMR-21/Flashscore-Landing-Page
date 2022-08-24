@@ -1,7 +1,12 @@
 "use strict";
 
-// Building navigation
 const navigation = document.querySelector(".main-nav");
+const navBtn = document.querySelector(".btn-mobile-nav");
+const headerEl = document.querySelector("#header");
+const sections = document.querySelectorAll("section");
+const current = document.querySelector(".current-section");
+
+// Building navigation
 
 function createNavItem(text, href = "#", id, className) {
   const listEl = document.createElement("li");
@@ -17,25 +22,37 @@ createNavItem("Home", undefined, "hero", "active");
 createNavItem("Help", "#section-how", "how");
 createNavItem("Features", "#section-features", "features");
 createNavItem("Testimonials", "#section-testimonials", "testimonials");
-createNavItem("Get The App", "#section-get", "get");
 
 // Toggling active section
-const sections = document.querySelectorAll("section");
 
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll", (e) => {
   let scrollPos = window.scrollY;
-  for (const section of sections)
+  for (const section of sections) {
+    const link = document.querySelector(`#${section.getAttribute("name")}`);
     if (
-      scrollPos + 75 > section.offsetTop &&
-      scrollPos + 75 < section.offsetTop + section.offsetHeight
+      scrollPos + 80 > section.offsetTop &&
+      scrollPos + 80 < section.offsetTop + section.offsetHeight
     ) {
-      console.log(section);
-      document
-        .querySelector(`#${section.getAttribute("name")}`)
-        .classList.add("active");
+      link && link.classList.add("active");
+      current.textContent = section.getAttribute("data");
     } else {
-      document
-        .querySelector(`#${section.getAttribute("name")}`)
-        .classList.remove("active");
+      link && link.classList.remove("active");
     }
+  }
+});
+
+// Mobile nav
+
+navBtn.addEventListener("click", function () {
+  headerEl.classList.toggle("nav-open");
+});
+
+headerEl.addEventListener("click", function (e) {
+  if (
+    headerEl.classList.contains("nav-open") &&
+    (e.target.classList.contains("nav-text") ||
+      e.target.getAttribute("name") === "arrow-down-outline")
+  ) {
+    headerEl.classList.remove("nav-open");
+  }
 });
