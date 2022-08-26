@@ -152,7 +152,7 @@ body {
 .btn-primary:visited {
   text-decoration: none;
   color: #e6e9ea;
-  background-color: #f31148;
+  background-color: yellow;
   padding: 1.2rem 3.2rem;
   border-radius: 9px;
   transition: all 0.3s;
