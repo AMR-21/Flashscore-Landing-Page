@@ -71,6 +71,8 @@ for (const btn of ctaBtns) {
   btn.addEventListener("click", smoothScroll.bind(null, "get"));
 }
 
+// For hero CTA button
+
 // Toggling active section
 
 window.addEventListener("scroll", (e) => {
