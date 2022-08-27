@@ -5,7 +5,7 @@ const navBtn = document.querySelector(".btn-mobile-nav");
 const headerEl = document.querySelector("#header");
 const sections = document.querySelectorAll("section");
 const current = document.querySelector(".current-section");
-const heroSection = document.querySelector("#section-hero");
+const homeSection = document.querySelector("#section-home");
 const topBtn = document.querySelector(".btn-top");
 const logo = document.querySelector(".main-logo");
 
@@ -18,23 +18,58 @@ function setLogo() {
 setLogo();
 window.addEventListener("resize", setLogo);
 
-// Building navigation
-// Function to append list item to the navigation
-function createNavItem(text, href = "#", id, className) {
-  const listEl = document.createElement("li");
-  listEl.innerHTML = `
-  <a href="${href}" id="${id}" class="nav-link ${className}">
-    <span class="nav-text">${text}</span>
+// Building navigation dynamically
+function buildNav() {
+  const items = navigation.innerText.split(" ");
+  const navFrag = document.createDocumentFragment();
+
+  for (const item of items) {
+    // Creating list element
+    const listEl = document.createElement("li");
+
+    listEl.innerHTML = `
+  <a href="#section-${item.toLowerCase()}" id=${item.toLowerCase()}  class="nav-link">
+    <span class="nav-text">${item.replace(
+      item[0],
+      item[0].toUpperCase()
+    )}</span>
   </a>
   `;
-  navigation.append(listEl);
+
+    navFrag.append(listEl);
+  }
+
+  navigation.innerHTML = "";
+  navigation.appendChild(navFrag);
 }
 
-// Appending the 4 nav items
-createNavItem("Home", undefined, "hero", "active");
-createNavItem("Help", "#section-how", "how");
-createNavItem("Features", "#section-features", "features");
-createNavItem("Testimonials", "#section-testimonials", "testimonials");
+buildNav();
+
+// Implementing smooth scroll
+const navLinks = document.querySelectorAll(".nav-link");
+const ctaBtns = document.querySelectorAll(".cta");
+
+// Smooth scroll function
+function smoothScroll(target, e) {
+  e.preventDefault();
+  document
+    .querySelector(`#section-${target}`)
+    .scrollIntoView({ behavior: "smooth" });
+}
+
+// Adjusting scroll for nav links
+
+for (const link of navLinks) {
+  link.addEventListener(
+    "click",
+    smoothScroll.bind(null, link.getAttribute("id"))
+  );
+}
+
+// Adjusting scroll for cta buttons
+for (const btn of ctaBtns) {
+  btn.addEventListener("click", smoothScroll.bind(null, "get"));
+}
 
 // Toggling active section
 
@@ -95,7 +130,7 @@ headerEl.addEventListener("click", function (e) {
 // Scroll to top button
 
 topBtn.addEventListener("click", function () {
-  heroSection.scrollIntoView();
+  homeSection.scrollIntoView({ behavior: "smooth" });
 });
 
 const obs = new IntersectionObserver(
@@ -115,4 +150,4 @@ const obs = new IntersectionObserver(
   }
 );
 
-obs.observe(heroSection);
+obs.observe(homeSection);

@@ -52,7 +52,6 @@ Default:9px
 html {
   /* Setting font size to 10 units*/
   font-size: 62.5%;
-  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
