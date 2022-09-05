@@ -9,19 +9,11 @@ const homeSection = document.querySelector("#section-home");
 const topBtn = document.querySelector(".btn-top");
 const logo = document.querySelector(".main-logo");
 
-// Setting main logo
-function setLogo() {
-  if (window.innerWidth <= 704) logo.src = "imgs/main-2.webp";
-  else logo.src = "imgs/main-1.webp";
-}
-
-setLogo();
-window.addEventListener("resize", setLogo);
-
 // Building navigation dynamically
+
 function buildNav() {
-  const items = navigation.innerText.split(" ");
   const navFrag = document.createDocumentFragment();
+  const items = navigation.textContent.trim().split(" ");
 
   for (const item of items) {
     // Creating list element
@@ -29,10 +21,9 @@ function buildNav() {
 
     listEl.innerHTML = `
   <a href="#section-${item.toLowerCase()}" id=${item.toLowerCase()}  class="nav-link">
-    <span class="nav-text">${item.replace(
-      item[0],
-      item[0].toUpperCase()
-    )}</span>
+    <span class="nav-text">${item
+      .toLowerCase()
+      .replace(item[0], item[0].toUpperCase())}</span>
   </a>
   `;
 
@@ -44,6 +35,15 @@ function buildNav() {
 }
 
 buildNav();
+
+// Setting main logo
+function setLogo() {
+  if (window.innerWidth <= 704) logo.src = "imgs/main-2.webp";
+  else logo.src = "imgs/main-1.webp";
+}
+
+setLogo();
+window.addEventListener("resize", setLogo);
 
 // Implementing smooth scroll
 const navLinks = document.querySelectorAll(".nav-link");
@@ -114,7 +114,7 @@ function enableScroll() {
 // Button handler
 navBtn.addEventListener("click", function () {
   headerEl.classList.toggle("nav-open");
-  headerEl.classList.contains("nav-open") ? disableScroll() : enableScroll();
+  // headerEl.classList.contains("nav-open") ? disableScroll() : enableScroll();
 });
 
 // Mobile nav links handler
