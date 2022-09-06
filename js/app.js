@@ -114,7 +114,7 @@ function enableScroll() {
 // Button handler
 navBtn.addEventListener("click", function () {
   headerEl.classList.toggle("nav-open");
-  // headerEl.classList.contains("nav-open") ? disableScroll() : enableScroll();
+  headerEl.classList.contains("nav-open") ? disableScroll() : enableScroll();
 });
 
 // Mobile nav links handler
